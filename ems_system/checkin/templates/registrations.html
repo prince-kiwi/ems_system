@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %} {% load static %} {% block main-content %}
+
+<html>
+  <body>
+    <div class="container">
+      <h3 class="text-center text-dark">Employee Registration Form</h3>
+      <div style="margin: auto; border: 2px solid black;  width: fit-content; padding: 20px;" >
+        <form action="" method="post">
+          {% csrf_token %} 
+          {% for fm in form %}
+          <div class="">
+              <div style="padding-top: 5px;">{{fm.label_tag}}</div>
+              <div style="width: 100%;">{{fm}}</div>
+            
+            <small class="text-warning">{{fm.errors|striptags}}</small>
+          </div>
+          {% endfor %}
+          <input class="btn btn-success" style="margin-top: 5px;" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock main-content %}
