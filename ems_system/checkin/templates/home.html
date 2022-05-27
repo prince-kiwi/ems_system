@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main-content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid secondary text-center">
+    <h1 class="text-center text-dark"> Employee Management System EMS </h1>
+    <a href='{% url "checkin" %}' class="btn btn-success">checkin</a>
+    <a href='{% url "checkout" %}' class="btn btn-danger">checkout</a>
+
+</div>
+</body>
+</html>
+{% endblock main-content %}
